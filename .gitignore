@@ -49,4 +49,5 @@ SAM4E8C
 SAM4E8E
 RADDS
 SAM3X8E
-.settings/*
+
+.settings
