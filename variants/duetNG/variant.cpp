@@ -224,14 +224,11 @@ extern const PinDescription g_APinDescription[]=
 
 
 /* For the Duet NG we use a logical pin numbering scheme:
- * Pins   0-25  PA0-25
- * Pins  26-31  PB0-3,13,14
- * Pins  32-63  PC0-31
- * Pins  64-95  PD0-31
- * Pins  96-101 PE0-5
- * Pin  102     PB6 (this got added late)
- * Pins 103-107 Various composite devices
- * Pins 200-215	IO0-IO15 on the SX1509B port expander on the DueXn
+ * Pins    0-25 PA0-25
+ * Pins   26-31 PB0-3,13,14
+ * Pins   32-63 PD0-31
+ * Pin       64 PB6 (this got added late)
+ * Pins   65-69 Various composite devices
  */
 
 /*
@@ -309,9 +306,9 @@ extern const PinDescription g_APinDescription[]=
   { PIOB, PIO_PB14X1_DAC1,     ID_PIOB, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DAC,	                    DA1,    NOT_ON_PWM,  NOT_ON_TIMER }, // DAC 1 (E1 motor current)
 
   // PIO D
-  // Pins 64-95 are PD0-PD31
+  // Pins 32-63 are PD0-PD31
 
-  // 64-71
+  // 32-39
   { PIOD, PIO_PD0,             ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E4 step
   { PIOD, PIO_PD1,             ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E3 step
   { PIOD, PIO_PD2,             ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E2 step
@@ -321,7 +318,7 @@ extern const PinDescription g_APinDescription[]=
   { PIOD, PIO_PD6,             ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // X step
   { PIOD, PIO_PD7,             ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // Y step
 
-  // 72-79
+  // 40-47
   { PIOD, PIO_PD8,             ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // Z step
   { PIOD, PIO_PD9,             ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E1 dir
   { PIOD, PIO_PD10, 		   ID_PIOD, PIO_INPUT,    PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E0 endstop
@@ -331,7 +328,7 @@ extern const PinDescription g_APinDescription[]=
   { PIOD, PIO_PD14,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // X en
   { PIOD, PIO_PD15,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // PS On
 
-  // 80-87
+  // 48-55
   { PIOD, PIO_PD16,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E4 dir
   { PIOD, PIO_PD17,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E5 dir
   { PIOD, PIO_PD18,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // LCD DB7
@@ -341,7 +338,7 @@ extern const PinDescription g_APinDescription[]=
   { PIOD, PIO_PD22,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E3 dir
   { PIOD, PIO_PD23,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E2 en
 
-  // 88-95
+  // 56-63
   { PIOD, PIO_PD24,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E3 en
   { PIOD, PIO_PD25,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E4 en
   { PIOD, PIO_PD26,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // E5 en
@@ -351,22 +348,22 @@ extern const PinDescription g_APinDescription[]=
   { PIOD, PIO_PD30,            ID_PIOD, PIO_OUTPUT_0, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // SAM transfer Ready
   { PIOD, PIO_PD31, 		   ID_PIOD, PIO_INPUT,    PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // ESP data ready
 
-  // 102 PB6 - was thought to be dedicated to JTAG but is also available on the expansion connector
+  // 64 PB6 - was thought to be dedicated to JTAG but is also available on the expansion connector
   { PIOB, PIO_PB6,				ID_PIOB, PIO_INPUT,	  PIO_DEFAULT,	PIN_ATTR_DIGITAL,					NO_ADC, NOT_ON_PWM,	 NOT_ON_TIMER }, // expansion
 
-  // 103 PB7 - now used as the VSSA sense pin
+  // 65 PB7 - now used as the VSSA sense pin
   { PIOB, PIO_PB7,				ID_PIOB, PIO_INPUT,	  PIO_DEFAULT,	PIN_ATTR_DIGITAL,					NO_ADC, NOT_ON_PWM,	 NOT_ON_TIMER }, // VSSA sense
 
-  // 104-105 HSMCI
+  // 66-67 HSMCI
   { PIOA, PIO_PA29C_MCCK,      ID_PIOA, PIO_PERIPH_C, PIO_DEFAULT,  PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // HSMCI MCCK
   { PIOA, PIO_PA28C_MCCDA | PIO_PA30C_MCDA0 | PIO_PA31C_MCDA1 | PIO_PA26C_MCDA2 | PIO_PA27C_MCDA3,
 		  	  	  	  	  	   ID_PIOA, PIO_PERIPH_C, PIO_PULLUP,   PIN_ATTR_DIGITAL,                   NO_ADC, NOT_ON_PWM,  NOT_ON_TIMER }, // HSMCI MCCDA, MCDA0-3
 
-  // 106 - TWI0 all pins
+  // 68 - TWI0 all pins
   { PIOA, PIO_PA3A_TWD0|PIO_PA4A_TWCK0, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT, (PIN_ATTR_DIGITAL|PIN_ATTR_COMBO), NO_ADC, NOT_ON_PWM, NOT_ON_TIMER },
-  // 107 - UART0 all pins
+  // 69 - UART0 all pins
   { PIOA, PIO_PA9A_URXD0|PIO_PA10A_UTXD0, ID_PIOA, PIO_PERIPH_A, PIO_DEFAULT, (PIN_ATTR_DIGITAL|PIN_ATTR_COMBO), NO_ADC, NOT_ON_PWM, NOT_ON_TIMER },
-  // 108 - UART1 all pins
+  // 70 - UART1 all pins
   { PIOA, PIO_PA5C_URXD1|PIO_PA6C_UTXD1, ID_PIOA, PIO_PERIPH_C, PIO_DEFAULT, (PIN_ATTR_DIGITAL|PIN_ATTR_COMBO), NO_ADC, NOT_ON_PWM, NOT_ON_TIMER }
 };
 
