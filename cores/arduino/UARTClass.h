@@ -22,7 +22,7 @@
 #include "HardwareSerial.h"
 #include "RingBuffer.h"
 
-#ifdef __SAM4E8E__
+#if defined(__SAM4E8E__) || defined(__SAM4E8C__)
 #include "component/usart.h"
 #else
 #include "component/component_usart.h"

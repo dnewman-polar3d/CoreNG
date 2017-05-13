@@ -18,7 +18,7 @@ Further modified up by David Crocker
 #include "Core.h"
 #include "sam/services/flash_efc/flash_efc.h"
 
-#ifdef __SAM4E8E__
+#if defined(__SAM4E8E__) || defined(__SAM4E8C__)
 
 // 1Kb of data
 #define FLASH_DATA_LENGTH   ((IFLASH_PAGE_SIZE/sizeof(byte))*4)

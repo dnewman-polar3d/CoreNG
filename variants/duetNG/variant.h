@@ -19,7 +19,7 @@
 #ifndef _VARIANT_DUET_NG_H
 #define _VARIANT_DUET_NG_H
 
-#ifndef __SAM4E8E__
+#if !defined(__SAM4E8E__) && !defined(__SAM4E8C__)
 #error Wrong variant.h file included!
 #endif
 

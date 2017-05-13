@@ -8,13 +8,13 @@ void DueFlashStorage::read(uint32_t address, void *data, uint32_t dataLength)
 
 bool DueFlashStorage::write(uint32_t address, const void *data, uint32_t dataLength)
 {
-#ifdef __SAM4E8E__
+#if defined(__SAM4E8E__) || defined(__SAM4E8C__)
 	// This doesn't work on the SAM4E, probably because we can only erase 8 pages at a time
 	// Use the 512-byte user signature area instead
 	return false;
 #else
 	if ((uint32_t)FLASH_START + address <
-#ifdef __SAM4E8E__
+#if defined(__SAM4E8E__) || defined(__SAM4E8C__)
 					IFLASH_ADDR
 #else
 					IFLASH1_ADDR
@@ -26,7 +26,7 @@ bool DueFlashStorage::write(uint32_t address, const void *data, uint32_t dataLen
 	}
 
 	if ((uint32_t)FLASH_START + address + dataLength >
-#ifdef __SAM4E8E__
+#if defined(__SAM4E8E__) || defined(__SAM4E8C__)
 					IFLASH_ADDR + IFLASH_SIZE
 #else
 					IFLASH1_ADDR + IFLASH1_SIZE
