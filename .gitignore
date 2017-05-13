@@ -50,4 +50,5 @@ SAM4E8E
 RADDS
 SAM3X8E
 
-.settings
+.project
+.settings/language.settings.xml
