@@ -67,10 +67,22 @@
 // SD card configuration for Duet and Duet WiFi
 #define SD_MMC_ENABLE
 
-#ifdef __RADDS__
+#if defined(__RADDS__)
 
 #define SD_MMC_HSMCI_MEM_CNT		0			// Number of HSMCI card slots supported
 #define SD_MMC_SPI_MEM_CNT			2			// Number of SPI card slots supported
+
+#define SD_MMC_SPI_MAX_CLOCK		(2000000)	// Max 2MHz clock for SPI cards, to allow a reasonable cable length
+
+#define SD_MMC_CD_DETECT_VALUE		false
+#define SD_MMC_WP_DETECT_VALUE		false
+
+#elif defined(AZTEEG)
+
+#define CONF_BOARD_SD_MMC_HSMCI		1			// Enable HSMCI
+#define SD_MMC_HSMCI_MEM_CNT		1			// Number of HSMCI card slots supported
+#define SD_MMC_HSMCI_SLOT_0_SIZE	4			// HSMCI bus width
+#define SD_MMC_SPI_MEM_CNT			0			// Number of SPI card slots supported
 
 #define SD_MMC_SPI_MAX_CLOCK		(2000000)	// Max 2MHz clock for SPI cards, to allow a reasonable cable length
 
