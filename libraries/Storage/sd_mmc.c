@@ -1798,8 +1798,10 @@ void sd_mmc_init(const Pin cdPins[], const Pin wpPins[], const Pin spiCsPins[])
 		else
 #endif
 		{
+#if (SD_MMC_SPI_MEM_CNT != 0)
 			card->iface = &spiInterface;
 			card->slot = slot - SD_MMC_HSMCI_MEM_CNT;
+#endif
 		}
 	}
 	sd_mmc_slot_sel = 0xFF;					// No slot selected
