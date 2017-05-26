@@ -376,7 +376,7 @@
 								<option id="gnu.c.compiler.option.debugging.level.1923448712" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.344550391" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="printf=iprintf"/>
-									<listOptionValue builtIn="false" value="AZTEEG"/>
+									<listOptionValue builtIn="false" value="BOARDX"/>
 									<listOptionValue builtIn="false" value="UDD_ENABLE"/>
 									<listOptionValue builtIn="false" value="UDD_NO_SLEEP_MGR"/>
 									<listOptionValue builtIn="false" value="__SAM4E8C__"/>
@@ -408,7 +408,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/variants/duetNG}&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.misc.other.1106706097" name="Other flags" superClass="gnu.c.compiler.option.misc.other" useByScannerDiscovery="false" value="-c -std=gnu99 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -nostdlib" valueType="string"/>
-								<option id="gnu.c.compiler.option.dialect.std.501974651" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.std.501974651" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.2055939770" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.817930444" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler">
@@ -416,7 +416,7 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.109052924" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.485995717" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="printf=iprintf"/>
-									<listOptionValue builtIn="false" value="AZTEEG"/>
+									<listOptionValue builtIn="false" value="BOARDX"/>
 									<listOptionValue builtIn="false" value="UDD_ENABLE"/>
 									<listOptionValue builtIn="false" value="UDD_NO_SLEEP_MGR"/>
 									<listOptionValue builtIn="false" value="__SAM4E8C__"/>
@@ -446,6 +446,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/variants/duetNG}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.other.other.2128685731" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -std=gnu++11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -fno-threadsafe-statics -fno-rtti -fno-exceptions -nostdlib" valueType="string"/>
+								<option id="gnu.cpp.compiler.option.dialect.std.1640733251" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.402338126" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.336530883" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
@@ -472,10 +473,12 @@
 		<configuration configurationName="SAM3X8E">
 			<resource resourceType="PROJECT" workspacePath="/CoreNG"/>
 		</configuration>
-		<configuration configurationName="SAM4E_PROTO1"/>
+		<configuration configurationName="RADDS"/>
 		<configuration configurationName="SAM4E8E">
 			<resource resourceType="PROJECT" workspacePath="/CoreNG"/>
 		</configuration>
+		<configuration configurationName="SAM4E_PROTO1"/>
+		<configuration configurationName="SAM4E8C"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="scannerConfiguration">
