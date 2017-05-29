@@ -376,11 +376,11 @@
 								<option defaultValue="gnu.c.optimization.level.most" id="gnu.c.compiler.option.optimization.level.1011989404" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.more" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.1923448712" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.344550391" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="printf=iprintf"/>
 									<listOptionValue builtIn="false" value="__BOARDX__"/>
+									<listOptionValue builtIn="false" value="__SAM4E8C__"/>
 									<listOptionValue builtIn="false" value="UDD_ENABLE"/>
 									<listOptionValue builtIn="false" value="UDD_NO_SLEEP_MGR"/>
-									<listOptionValue builtIn="false" value="__SAM4E8C__"/>
+									<listOptionValue builtIn="false" value="printf=iprintf"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.paths.1728697174" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/cores/arduino}&quot;"/>
@@ -416,11 +416,11 @@
 								<option id="gnu.cpp.compiler.option.optimization.level.1401368068" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.more" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.109052924" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.485995717" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="printf=iprintf"/>
+									<listOptionValue builtIn="false" value="__SAM4E8C__"/>
 									<listOptionValue builtIn="false" value="__BOARDX__"/>
 									<listOptionValue builtIn="false" value="UDD_ENABLE"/>
 									<listOptionValue builtIn="false" value="UDD_NO_SLEEP_MGR"/>
-									<listOptionValue builtIn="false" value="__SAM4E8C__"/>
+									<listOptionValue builtIn="false" value="printf=iprintf"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.include.paths.1198182222" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/cores/arduino}&quot;"/>
@@ -447,7 +447,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/variants/duetNG}&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.other.other.2128685731" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" useByScannerDiscovery="false" value="-c -std=gnu++11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -ffunction-sections -fdata-sections -fno-threadsafe-statics -fno-rtti -fno-exceptions -nostdlib" valueType="string"/>
-								<option id="gnu.cpp.compiler.option.dialect.std.1640733251" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.cpp.compiler.option.dialect.std.1640733251" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.402338126" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.336530883" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
