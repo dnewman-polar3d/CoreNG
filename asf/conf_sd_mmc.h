@@ -77,7 +77,7 @@
 #define SD_MMC_CD_DETECT_VALUE		false
 #define SD_MMC_WP_DETECT_VALUE		false
 
-#elif defined(BOARDX)
+#elif defined(__BOARDX__)
 
 #define CONF_BOARD_SD_MMC_HSMCI		1			// Enable HSMCI
 #define SD_MMC_HSMCI_MEM_CNT		1			// Number of HSMCI card slots supported
